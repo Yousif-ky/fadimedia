@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv=x-ua-compatible>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadi Media</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/fc719b6eb4.js" crossorigin="anonymous">
+  </script>
+  <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "102753438741858");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  <div onclick="closePopout()" id="shadow"></div>
+  <div id="popout">
+  <i onclick="closePopout()" class="fas fa-minus-square"></i>
+   <div>
+    <div class="key1"><p>Alt</p></div>
+    <p>+</p>
+    <div class="key2"><p>M</p></div>
+    <h1>Open menu</h1>
+  </div>
+  <div class="hint"><p>& Alt + X to close the menu</p></div>
+  </div>
+   <!-- <div id="alert">
+  <h1>Open the menu with your keyboard to see how click show me</h1>
+  <button onclick="openPopout()">show me</button>
+  <button onclick="clsAlert()">close</button></div> -->
+  <div id="sidenav">
+    <i accesskey="x" onclick="closeNav()" class="fas fa-minus-square"></i>
+    <div class="logo"><a href="index.html">
+   <h1>FadiMedia</h1></a></div>
+    <div id="sidenavlinks">
+    <a href="index.html" title="FadiMedia"><h1>Home</h1></a>
+    <a href="#" title="Our prices"><h1>Pricing</h1></a>
+    <a href="#" title="Know who we are"><h1>About</h1></a>
+    <a href="#" title="Get in touch"><h1>Contact us</h1></a>
+    </div>
+  <a href="tel:123-456-789">
+    <button class="callbtn">Give us a call <i class="fas fa-phone"></i>
+    <img src="https://media.giphy.com/media/1oEttHTW7Dh6WFabZd/giphy.gif">
+    </button></a>
+    <p>Working hours: from 9am-5pm Mon to Sat.</p>
+  <div class="socialmedia">
+    <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a> 
+    <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a> 
+    </div>
+</div>
+<section> 
+<div class="parent">
+   <header>
+  <div class="logo"><a href="index.html"><h1>FadiMedia</h1></a>
+  </div>
+  <div accesskey="m" onclick="openNav()" class="navbars">
+     <h1>Menu<i class="fas fa-th"></i></h1></div>
+  <nav> 
+    <ul>
+      <a href="index.html" title="FadiMedia"><li>home</li></a> 
+      <a href="#" title="Our prices"><li>pricing<i class="fas fa-fire"></i></li></a>
+      <a href="#" title="Know who we are"><li>about</li></a>
+      <a href="#" title="Get in touch"><li>contacts</li></a>
+    </ul>
+  </nav>
+  <div class="smicons">
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="tel:123-456-789"><i class="fas fa-headset"></i></a>
+  </div>
+</header>
+  <div class="child1">
+    <div class="line"></div>
+    <h1>Take your photo's to the next level!</h1>
+    <p>orem Ipsum is simply dummy text of the printing and typesetting industry Ipsum has been the industry's standard standard text ever since the unknown printer took galley of type and scrambled.
+    </p>
+    <button>Contact us <i class="far fa-paper-plane"></i></button>
+  </div>
+  <div class="child2">
+    <video width="280" autoplay="true" loop>
+  <source src="media/vid1.mp4" type="video/mp4">
+  Your browser does not support HTML video.
+</video>
+    <video width="280" autoplay="true" loop>
+  <source src="media/vid2.mp4" type="video/mp4">
+  Your browser does not support HTML video.
+</video>
+  </div>
+</div>
+</section>
+<div id="imgbtns">
+    <img onclick="pic1()" id="imgbtn" src="media/showcase1.jpg">
+    <img onclick="pic2()" id="imgbtn" src="media/showcase2.jpg">
+    <img onclick="pic3()" id="imgbtn" src="media/showcase3.jpg">
+    <img onclick="pic4()" id="imgbtn" src="media/showcase4.jpg">
+    <img onclick="pic5()" id="imgbtn" src="media/showcase5.jpg">
+</div>
+<div class="pictures">
+  <img id="pic1" src="media/showcase1.jpg">
+  <img id="pic2" src="media/showcase2.jpg">
+  <img id="pic3" src="media/showcase3.jpg">
+  <img id="pic4" src="media/showcase4.jpg">
+  <img id="pic5" src="media/showcase5.jpg">
+</div>
+<div class="hello">
+ <video style="border-radius: 0px;margin: 0px;" width="100%" 
+ autoplay loop>
+  <source src="media/vidcase.mp4" type="video/mp4">
+  Your browser does not support HTML video.
+</video>
+  <div class="shapebig" data-tilt data-tilt-full-page-listening data-tilt-max="10" data-tilt-speed="1" data-tilt-perspective="500"></div>
+  <div class="shape" data-tilt data-tilt-full-page-listening data-tilt-max="30" 
+data-tilt-speed="1" data-tilt-perspective="500"data-tilt-reverse="true"></div>
+  <div class="text">
+  <h1>ELEVATE YOUR GAME WITH FADI MEDIA</h1>
+  <p>Hire us and get the highest quality job.</p>
+  <button>Hire us</button></div>
+</div>
+<script src="vanilla-tilt.js"></script>
+</body>
+</html>
