@@ -33,7 +33,7 @@ header{
 }
 nav{
 	  display: inline-block;
-	  margin: 12px 0px 0px 20vw;
+	  margin: 12px 0px 0px 0vw;
 	  overflow: hidden;
 }
 nav ul{
