@@ -7,7 +7,7 @@ function closeNav() {
 }
 
 function closePopout() {
-    document.getElementById("popout").style.top = "-50%";
+    document.getElementById("popout").style.top = "-30%";
      document.getElementById("shadow").style.height = "0%";
 }
 function openPopout() {

@@ -11,17 +11,18 @@
 ::selection {background: #ff4b058c; }
 body{
   font-family: 'arial', sans-serif;
-   background-color: black;
+   background-color: #111;
 }
 header{
 	width: 100%;
 	margin-bottom: 20px;
+	text-align: center;
 	overflow: hidden;
 }
 .logo{
 	float: left;
 	width: 0 auto;
-	margin: 20px 0px 0px 20px;
+	margin-top: 20px;
 }
 .logo h1{
 	font-family: 'MuseoModerno', cursive;
@@ -33,7 +34,7 @@ header{
 }
 nav{
 	  display: inline-block;
-	  margin: 12px 0px 0px 20vw;
+	  margin-top: 12px;
 	  overflow: hidden;
 }
 nav ul{
@@ -50,6 +51,7 @@ ul li{
 }
 ul li:hover {
 	background-color: #ffffff1f;
+	color: #0066FF;
 }
 ul a{
 	font-family: 'MuseoModerno', cursive;
@@ -58,7 +60,7 @@ ul a{
 #alert{
 	width: 100%;
 	height: 50px;
-	background-color: whiteviolet;
+	background-color: #1E1926;
 	transition: all 0.3s ease-in-out;
 	overflow: hidden;
 }
@@ -69,12 +71,14 @@ ul a{
 	color: white;
 }
 #alert button{
+	color: #000;
+	font-weight: bold;
 	padding: 5px;
 	float: right;
 	margin: 10px;
 }
 .fa-fire{
-	color: blue;
+	color: #0066FF;
 	animation: fire 2s infinite;
 }
 @keyframes fire{
@@ -93,14 +97,13 @@ ul a{
 }
 .smicons{
 	float: right;
-  margin: 30px 20px 0px 0px;
+  margin-top: 30px;
   overflow: hidden;
 }
 .smicons a i{
 	font-size: 1.1vw;
 	color: white;
   padding: 2px;
-  margin-left: 5px;
 }
 .smicons a i:hover{
    color: #FF683E;
@@ -136,9 +139,12 @@ ul a{
     overflow: hidden;
     z-index: 999;
 }
+#sidenav .logo{
+	margin: 20px 30px;
+}
 .fa-minus-square{
 	font-size: 40px;
-	margin: 20px 28px;
+	margin: 20px 30px;
 	float: right;
 	color: #f1f1f1;
 }
@@ -173,6 +179,7 @@ ul a{
 }
 .socialmedia{
 	padding: 10px;
+	margin-left: 20px;
 	overflow: hidden;
 }
 .socialmedia i{
@@ -251,12 +258,12 @@ video{
 }
 .child1 h1{
 	color: white;
-	font-size: 6.5vw;
+	font-size: 6.4vw;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
 .child1 p{
-	width: 600px;
+	width: 500px;
 	color: white;
 	font-size: 1.3vw;
 }
@@ -266,6 +273,7 @@ video{
 	margin-top: 30px;
 	background-color: #000;
 	color: white;
+	font-size: 1.0vw;
 	font-weight: bold;
 	cursor: pointer;
 	border: none;
@@ -273,13 +281,14 @@ video{
   transition: all 0.2s ease-in-out;
 }
 .child1 button:hover{
-	background-color: #FF683E;
+	background-color: black;
+	transform: scale(0.99);
 	padding-left: 10px;
 }
 .fa-paper-plane{
 	display: inline;
 	font-size: 14px;
-	transition: all 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+	transition: all 0.8s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 .child1 button:hover .fa-paper-plane{
 	 transform: skewX(60deg) translate(100px,-50px);
@@ -290,11 +299,6 @@ video{
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
-}
-.child2 img{
-	margin: 5px;
-	width: 50%;
-	border-radius: 10px;
 }
 .pictures{
 	width: 100%;
@@ -329,8 +333,6 @@ video{
 }
 #imgbtns #imgbtn:hover{
 	transform: scale(1.1);
-}
-.wave{
 }
 .hello{
 	display: flex;
@@ -384,10 +386,10 @@ video{
 	position: fixed;
 	width: 100%;
 	height: 0%;
-	background-color: white;
+	background: #0000ff;
 	filter: opacity(70%);
 	z-index: 1000;
-	transition: 0.5s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 #popout{
 	display: flex;
@@ -399,11 +401,11 @@ video{
 	border-radius: 10px;
 	background-color: #000;
 	position: fixed;
-	top: -50%;
+	top: -30%;
 	left: 50%;
 	box-shadow: 0px 0px 10px black;
 	transform: translate(-50%,-50%);
-	transition: 1s ease-in-out;
+	transition: 0.8s ease-out;
 	z-index: 1000;
 }
 #popout .fa-minus-square{
@@ -486,22 +488,11 @@ video{
 
 /* Media query Start here ............................... */
 @media screen and (max-width: 1000px) {
+		#alert{
+		display: none;
+	}
 	.logo h1{
 		font-size: 28px;
-	}
-	.smicons{
-	float: right;
-  margin: 30px;
-}
-.smicons a i{
-	font-size: 14px;
-  margin-left: 5px;
-}
-	#popout{
-		display: none;
-	}
-	#shadow{
-		display: none;
 	}
   nav {
     display: none;
@@ -521,8 +512,9 @@ video{
 	font-size: 22px;
 }
 .child1 button{
-	width: 200px;
+	width: 250px;
 	height: 60px;
+	font-size: 12px;
 }
 .parent .child2{
 	  width: 100%;
@@ -537,7 +529,7 @@ video{
 	}
 	.navbars{
 		margin-top: 36px;
-	  font-size: 9px;
+	  font-size: 10px;
 }
 	  .hello .text{
 	  	font-size: 12px;
@@ -563,7 +555,7 @@ video{
 	display: none;
 }
 .child1 h1{
-	font-size: 64px;
+	font-size: 42px;
 }
 .child1 p{
 	width: 100%;
@@ -571,6 +563,7 @@ video{
 .child1 button{
 	width: 200px;
 	height: 60px;
+	font-size: 12px;
 	margin-top: 50px;
 }
 .parent .child2{
@@ -585,26 +578,17 @@ video{
 	  #sidenav p{
 	margin-top: 10px;
   margin-left: 20px;
-  font-size: 12px;
-  padding-right: 50px;
-}
-.socialmedia{
-	margin-right: 20px;
+  font-size: 10px;
 }
 .smicons{
-	float: right;
-  margin: 36px;
-}
-.smicons a i{
-	font-size: 14px;
-  margin-left: 5px;
+	display: none;
 }
 .pictures{
 	height: 250px;
 }
 .pictures img{
-	width: 500px;
-  height: 250px;
+	width: 100%;
+  height: 200px;
 }
 }
 /* Media query End here ................................. */
