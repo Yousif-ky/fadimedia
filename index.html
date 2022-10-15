@@ -6,145 +6,341 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fadi Media</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" href="media/tab.ico">
   <link rel="manifest" href="img/site.webmanifest">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="main.js"></script>
-  <script src="https://kit.fontawesome.com/fc719b6eb4.js" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/2.0.1/smooth-scrollbar.css">
+  <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/b4fdee4648.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(window).on('load', function() {
+      $('#status').fadeOut();
+      $('#preloader').delay(300).fadeOut();
+    })
   </script>
-  <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="fb-root"></div>
-    <div id="fb-customer-chat" class="fb-customerchat">
+  <div id="preloader">
+    <div id="status"><img draggable="false" src="media/loadanmi.gif"><p>FadiMedia</p></div>
     </div>
+    <div onclick="closeNav()" id="snshadow"></div>
+    <div id="sidenav">
+      <i onclick="closeNav()" class="fas fa-minus-square" title="Use [X] key to close the menu"></i>
+      <div class="logo"><a href="index.html">
+       <h1>FadiMedia</h1></a></div>
+       <div id="sidenavlinks">
+        <a href="index.html" title="FadiMedia"><h1>Home</h1></a>
+        <hr>
+        <a href="#" title="Get in touch"><h1>Booking</h1></a>
+        <hr>
+        <a href="#" title="See projects"><h1>Work</h1></a>
+        <hr>
+        <a href="#" title="Our team"><h1>Team</h1></a>
+        <hr>
+        <a href="#" title="Know who we are"><h1>About</h1></a>
+      </div>
+      <div class="btncntr">
+        <a href="tel:123-456-789">
+          <button class="callbtn">Give us a call <i class="fas fa-phone"></i></button></a>
+          <p>Working hours: 9am-5pm mon to sat.</p></div>
+          <div class="socialmedia">
+            <a href="https://web.facebook.com/fadimediapage/" title="Meta" target="_blank">
+              <i class="fa-brands fa-facebook"></i> facebook</a>
+              <a href="#" title="Meta" target="_blank"><i class="fa-brands fa-instagram"></i> instagram</a>
+              <a href="mailto:info.fadimedia@gmail.com" title="Meta"><i class="fas fa-envelope"></i> info.fadimedia@gmail.com</a>
+            </div>
+          </div>
+          <div id="fb-root"></div>
+          <div id="fb-customer-chat" class="fb-customerchat">
+          </div>
+          <script>
+            var chatbox = document.getElementById('fb-customer-chat');
+            chatbox.setAttribute("page_id", "102753438741858");
+            chatbox.setAttribute("attribution", "biz_inbox");
 
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "102753438741858");
-      chatbox.setAttribute("attribution", "biz_inbox");
+            window.fbAsyncInit = function() {
+              FB.init({
+                xfbml            : true,
+                version          : 'v11.0'
+              });
+            };
 
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v11.0'
-        });
-      };
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+          <div id="butter">
+            <video class="bgvid" autoplay muted loop>
+                      <source src="media/bgvid.mp4" type="video/mp4">
+                      </video>
+              <header>
+                <div class="logo"><a href="index.html"><h1>FadiMedia</h1></a></div>
+                <div onclick="openNav()" class="navbars" title="Use [M] key to open the menu">menu <i class="fas fa-grip-lines"></i></div>
+                <nav> 
+                  <ul>
+                    <a href="index.html" title="FadiMedia"><li>Home</li></a> 
+                    <a href="#" title="See projects"><li>Work<i class="fas fa-fire"></i></li></a> 
+                    <a href="#" title="Get in touch"><li>Booking</li></a>
+                    <a href="#" title="Know who we are"><li>About</li></a>
+                  </ul>
+                </nav>
+                <div class="smicons">
+                  <a href="https://www.facebook.com/fadimediapage/" title="Meta" target="_blank">
+                    <i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Meta" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="tel:123-456-789" title="Call FadiMedia"><i class="fas fa-headset"></i></a>
+                  </div>
+                </header>
+                <div class="con">
+                  <div class="pt1">
+                    <h1>We make your best moments immortal<br>The best photography service in Australia</h1>
+                    <p>Lorem ipsum dolor sit ametsunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="mailto:info.fadimedia@gmail.com"><button>Contact us <i class="far fa-paper-plane"></i></button></a>
+                    <a href="mailto:info.fadimedia@gmail.com"><button>Contact us <i class="far fa-paper-plane"></i></button></a>
+                  </div>
+                  <div class="mousecon"><img class="mouseimg" src="media/mouse.gif"></div>
+                  <div class="con2" data-rellax-speed="5" data-rellax-percentage="0.5">
+                    <h1>Activate, convert,<br>retain.</h1>
+                    <h2>We craft touchpoints to <strong>amplify<br>experience</strong> at every step of the<br>customer journey.</h2><button><small>Discover</small> <strong>fadiMedia</strong>
+                    </button>
+                  </div>
+                    </div>
+                  
+                  <div class="con3">
+                    <div class="pt4">
+                      <img loading="lazy" title="Photo by FadiMedia 2022" onclick="pic6()" id="pic6" src="media/showcase6.jpg">
+                      <img loading="lazy" title="Photo by FadiMedia 2022" onclick="pic5()" id="pic5" src="media/showcase5.jpg">
+                      <img loading="lazy" title="Photo by FadiMedia 2022" onclick="pic4()" id="pic4" src="media/showcase4.jpg">
+                      <img loading="lazy" title="Photo by FadiMedia 2022" onclick="pic3()" id="pic3" src="media/showcase3.jpg">
+                      <img loading="lazy" title="Photo by FadiMedia 2022" onclick="pic2()" id="pic2" src="media/showcase2.jpg">
+                      <img loading="lazy" title="Photo by FadiMedia 2022" onclick="pic1()" id="pic1" src="media/showcase1.jpg">
+                      <img loading="lazy" onclick="tabHereImg()" id="tabhereimg" src="media/tabhere.gif">
+                    </div>
+                    <div id="pt3">
+                      <img loading="lazy" onclick="pic6()" id="imgbtn" src="media/showcase6.jpg">
+                      <p>06</p>
+                      <img loading="lazy" onclick="pic5()" id="imgbtn" src="media/showcase5.jpg">
+                      <p>05</p>
+                      <img loading="lazy" onclick="pic4()" id="imgbtn" src="media/showcase4.jpg">
+                      <p>04</p>
+                      <img loading="lazy" onclick="pic3()" id="imgbtn" src="media/showcase3.jpg">
+                      <p>03</p>
+                      <img loading="lazy" onclick="pic2()" id="imgbtn" src="media/showcase2.jpg">
+                      <p>02</p>
+                      <img loading="lazy" onclick="pic1()" id="imgbtn" src="media/showcase1.jpg">
+                      <p>01</p>
+                    </div>
+                    <div id="hint"><p>Hint: use numbers on your keyboard to switch pictures.</p></div>
+                  </div>
+                  
+                  <div class="pt2">
+                    <video width="250" autoplay muted loop data-tilt data-tilt-full-page-listening data-tilt-max="10" data-tilt-speed="1" data-tilt-perspective="500"data-tilt-reverse="true">
+                    <source src="media/vid2.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                    <h1 style="color: #2020ff;margin: 0vw 4vw;">BREAK THE USUAL<br>MAKE THE IMPOSSIBLE<br>POSSIBLE</h1>
+                <video id="video1" width="265" autoplay muted loop data-tilt data-tilt-full-page-listening data-tilt-max="10" data-tilt-speed="1" data-tilt-perspective="500">
+                  <source src="media/vid1.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                  </div>
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-  <div onclick="closePopout()" id="shadow"></div>
-  <div id="popout">
-  <i onclick="closePopout()" class="fas fa-minus-square"></i>
-   <div>
-    <div class="key1"><p>Alt</p></div>
-    <p>+</p>
-    <div class="key2"><p>M</p></div>
-    <h1>Open menu</h1>
-  </div>
-  <div class="hint"><p>& Alt + X to close the menu</p></div>
-  </div>
-   <!-- <div id="alert">
-  <h1>Open the menu with your keyboard to see how click show me</h1>
-  <button onclick="openPopout()">show me</button>
-  <button onclick="clsAlert()">close</button></div> -->
-  <div id="sidenav">
-    <i accesskey="x" onclick="closeNav()" class="fas fa-minus-square"></i>
-    <div class="logo"><a href="index.html">
-   <h1>FadiMedia</h1></a></div>
-    <div id="sidenavlinks">
-    <a href="index.html" title="FadiMedia"><h1>Home</h1></a>
-    <a href="#" title="Our prices"><h1>Pricing</h1></a>
-    <a href="#" title="Know who we are"><h1>About</h1></a>
-    <a href="#" title="Get in touch"><h1>Contact us</h1></a>
-    </div>
-  <a href="tel:123-456-789">
-    <button class="callbtn">Give us a call <i class="fas fa-phone"></i>
-    <img src="https://media.giphy.com/media/1oEttHTW7Dh6WFabZd/giphy.gif">
-    </button></a>
-    <p>Working hours: from 9am-5pm Mon to Sat.</p>
-  <div class="socialmedia">
-    <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a> 
-    <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a> 
-    </div>
-</div>
-<section> 
-<div class="parent">
-   <header>
-  <div class="logo"><a href="index.html"><h1>FadiMedia</h1></a>
-  </div>
-  <div accesskey="m" onclick="openNav()" class="navbars">
-     <h1>Menu<i class="fas fa-th"></i></h1></div>
-  <nav> 
-    <ul>
-      <a href="index.html" title="FadiMedia"><li>home</li></a> 
-      <a href="#" title="Our prices"><li>pricing<i class="fas fa-fire"></i></li></a>
-      <a href="#" title="Know who we are"><li>about</li></a>
-      <a href="#" title="Get in touch"><li>contacts</li></a>
-    </ul>
-  </nav>
-  <div class="smicons">
-    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="tel:123-456-789"><i class="fas fa-headset"></i></a>
-  </div>
-</header>
-  <div class="child1">
-    <div class="line"></div>
-    <h1>Take your photo's to the next level!</h1>
-    <p>orem Ipsum is simply dummy text of the printing and typesetting industry Ipsum has been the industry's standard standard text ever since the unknown printer took galley of type and scrambled.
-    </p>
-    <button>Contact us <i class="far fa-paper-plane"></i></button>
-  </div>
-  <div class="child2">
-    <video width="280" autoplay="true" loop>
-  <source src="media/vid1.mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-    <video width="280" autoplay="true" loop>
-  <source src="media/vid2.mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-  </div>
-</div>
-</section>
-<div id="imgbtns">
-    <img onclick="pic1()" id="imgbtn" src="media/showcase1.jpg">
-    <img onclick="pic2()" id="imgbtn" src="media/showcase2.jpg">
-    <img onclick="pic3()" id="imgbtn" src="media/showcase3.jpg">
-    <img onclick="pic4()" id="imgbtn" src="media/showcase4.jpg">
-    <img onclick="pic5()" id="imgbtn" src="media/showcase5.jpg">
-</div>
-<div class="pictures">
-  <img id="pic1" src="media/showcase1.jpg">
-  <img id="pic2" src="media/showcase2.jpg">
-  <img id="pic3" src="media/showcase3.jpg">
-  <img id="pic4" src="media/showcase4.jpg">
-  <img id="pic5" src="media/showcase5.jpg">
-</div>
-<div class="hello">
- <video style="border-radius: 0px;margin: 0px;" width="100%" 
- autoplay loop>
-  <source src="media/vidcase.mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-  <div class="shapebig" data-tilt data-tilt-full-page-listening data-tilt-max="10" data-tilt-speed="1" data-tilt-perspective="500"></div>
-  <div class="shape" data-tilt data-tilt-full-page-listening data-tilt-max="30" 
-data-tilt-speed="1" data-tilt-perspective="500"data-tilt-reverse="true"></div>
-  <div class="text">
-  <h1>ELEVATE YOUR GAME WITH FADI MEDIA</h1>
-  <p>Hire us and get the highest quality job.</p>
-  <button>Hire us</button></div>
-</div>
-<script src="vanilla-tilt.js"></script>
+                  <div class="con4">
+                    <div class="pt5" data-rellax-speed="5" data-rellax-percentage="0.5">
+                      <div class="txt">
+                        <h1>Colors are the smiles of nature</h1>
+                        <p>colors are the smiles of nature, colors are the smiles of nature</p>
+                      </div>
+                      <img data-tilt data-tilt-full-page-listening data-tilt-max="1" data-tilt-speed="1" data-tilt-perspective="500"
+                      src="https://images.unsplash.com/photo-1614963326505-843868e1d83a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+                    </div>
+                    <div class="pt6">
+                      <img data-tilt data-tilt-full-page-listening data-tilt-max="1" data-tilt-speed="1" data-tilt-perspective="500"data-tilt-reverse="true"
+                      src="https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+                      <div class="txt">
+                        <h1>Colors are the smiles of nature</h1>
+                        <p>colors are the smiles of nature, colors are the smiles of nature</p>
+                      </div>
+                    </div></div>
+
+                    <div class="con1">
+                      <p>our team is one of the best</p>
+                      <h1>Dreams are somthing spiacial and we make it reailty</h1>
+                      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+                      <div class="add1" data-rellax-speed="1" data-rellax-percentage="0.5">
+                        <img src="https://kingsonphotography.com/wp-content/uploads/2021/05/1578565124-photo-studio.jpg">
+                        <img src="https://121clicks.com/wp-content/uploads/2020/08/how_to_setup_home_photography_studio.jpg">
+                        <img src="https://jonathantaylorphotography.com/wp-content/uploads/2019/01/photography-studio-rental-bangkok-1280x854.jpg">
+                      </div>
+                    </div>
+
+                    <div class="con5">
+                      <video class="pt7" autoplay muted loop>
+                        <source src="media/vidcase.mp4" type="video/mp4">
+                          Your browser does not support HTML video.
+                        </video>
+                        <div class="shapebig" data-tilt data-tilt-full-page-listening data-tilt-max="10" data-tilt-speed="1" data-tilt-perspective="500"></div>
+                        <div class="shape" data-tilt data-tilt-full-page-listening data-tilt-max="30" 
+                        data-tilt-speed="1" data-tilt-perspective="500"data-tilt-reverse="true"></div>
+                        <div class="text" data-rellax-speed="1" data-rellax-percentage="0.5">
+                          <h1>Elevate your game with our projects</h1>
+                          <p>hire us and get the highest quality job</p>
+                          <button>Hire Us</button></div>
+                        </div>
+
+                        <div class="con1">
+                          <div class="add1" data-rellax-speed="1" data-rellax-percentage="0.5">
+                            <img src="https://kingsonphotography.com/wp-content/uploads/2021/05/1578565124-photo-studio.jpg">
+                            <img src="https://121clicks.com/wp-content/uploads/2020/08/how_to_setup_home_photography_studio.jpg">
+                            <img 
+                            src="https://jonathantaylorphotography.com/wp-content/uploads/2019/01/photography-studio-rental-bangkok-1280x854.jpg">
+                          </div>
+                          <p>our team is one of the best</p>
+                          <h1>Dreams are somthing spiacial and we make it reailty</h1>
+                          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                          tempor incididunt ut labore et proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2> 
+                        </div>
+
+                        <footer>
+                          <a class="totop" href="#"><i class="fa-solid fa-circle-up"></i></a>
+                          <div class="flcon">
+                            <div class="footlinks">
+                              <p>More links</p>
+                              <a href="#"><i class="fa-solid fa-house"></i> home</a>
+                              <a href="#"><i class="fa-solid fa-briefcase"></i> projects</a>
+                              <a href="#"><i class="fa-solid fa-rectangle-list"></i> about</a>
+                              <a href="#"><i class="fa-solid fa-sitemap"></i> site map</a>
+                            </div>
+                            <div class="footlinks">
+                              <p>Social media</p>
+                              <a href="https://www.facebook.com/fadimediapage/" title="Meta" target="_blank">
+                                <i class="fa-brands fa-facebook"></i> facebook</a>
+                                <a href="#" title="Twitter" target="_blank"><i class="fa-brands fa-facebook-messenger"></i> messenger</a>
+                                <a href="#" title="Meta" target="_blank"><i class="fa-brands fa-instagram"></i> instagram</a>
+                                <a href="#" title="Twitter" target="_blank"><i class="fa-brands fa-twitter"></i> twitter</a>
+                              </div> 
+                              <div class="footlinks">
+                                <p>Contacts</p>
+                                <a href="tel:123-456-789" title="Call FadiMedia"><i class="fa-solid fa-headset"></i> call us now</a>
+                                <a href="mailto:info.fadimedia@gmail.com" title="Meta">
+                                  <i class="fa-solid fa-envelope"></i> info.fadimedia@gmail.com</a>
+                                </div>
+                              </div>
+                              <div class="foottxt"><p>&copy; 2022 <abbr class="footlogo">FadiMedia</abbr>. All rights reserved. Designed & developed by <a target="_blank" href="https://yousif.netlify.app/">YKY</a></p></div>
+                            </footer>
+
+                          </div> <!--This tag for butter.js-->
+                          <!-- JAVASCRIPT BELOW THIS LINE -->
+                          <!-- The cursor elements -->
+                          <div class="cursor cursorsmall"></div>
+                          <canvas class="cursor cursorcanvas" resize></canvas>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+                          <script>
+  // set the starting position of the cursor outside of the screen
+  let clientX = 500;
+  let clientY = 100;
+  const innerCursor = document.querySelector(".cursorsmall");
+
+  const initCursor = () => {
+  // add listener to track the current mouse position
+  document.addEventListener("mousemove", (e) => {
+    clientX = e.clientX;
+    clientY = e.clientY;
+  });
+
+  // transform the innerCursor to the current mouse position
+  // use requestAnimationFrame() for smooth performance
+  const render = () => {
+    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+    requestAnimationFrame(render);
+  };
+  requestAnimationFrame(render);
+};
+
+initCursor();
+
+let lastX = 0;
+let lastY = 0;
+let isStuck = false;
+let showCursor = false;
+let group, stuckX, stuckY, fillOuterCursor;
+
+const initCanvas = () => {
+  const canvas = document.querySelector(".cursorcanvas");
+  const shapeBounds = {
+    width: 75,
+    height: 75
+  };
+  paper.setup(canvas);
+  const strokeColor = "#f1f1f1";
+  const strokeWidth = 2;
+  const segments = 8;
+  const radius = 20;
+
+  // we'll need these later for the noisy circle
+  const noiseScale = 150; // speed
+  const noiseRange = 4; // range of distortion
+  let isNoisy = false; // state
+
+  // the base shape for the noisy circle
+  const polygon = new paper.Path.RegularPolygon(
+    new paper.Point(0, 0),
+    segments,
+    radius
+    );
+  polygon.strokeColor = strokeColor;
+  polygon.strokeWidth = strokeWidth;
+  polygon.smooth();
+  group = new paper.Group([polygon]);
+  group.applyMatrix = false;
+
+  const noiseObjects = polygon.segments.map(() => new SimplexNoise());
+  let bigCoordinates = [];
+
+  // function for linear interpolation of values
+  const lerp = (a, b, n) => {
+    return (1 - n) * a + n * b;
+  };
+
+  // function to map a value from one range to another range
+  const map = (value, in_min, in_max, out_min, out_max) => {
+    return (
+      ((value - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+      );
+  };
+
+  // the draw loop of Paper.js
+  // (60fps with requestAnimationFrame under the hood)
+  paper.view.onFrame = (event) => {
+    // using linear interpolation, the circle will move 0.2 (20%)
+    // of the distance between its current position and the mouse
+    // coordinates per Frame
+    lastX = lerp(lastX, clientX, 0.2);
+    lastY = lerp(lastY, clientY, 0.2);
+    group.position = new paper.Point(lastX, lastY);
+  };
+};
+
+initCanvas();
+</script>
+<script src="js/vanilla-tilt.js"></script>
+<script
+src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js">
+</script>
+<script>
+  var rellax = new Rellax('.text, .con2, .pt5, .add1');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/butter.js"></script>
+<img style="display: none;" src="https://hitwebcounter.com/counter/counter.php?page=7921714&style=0005&nbdigits=6&type=ip&initCount=0" title="YkY stats" Alt="web counter"   border="0" /> 
+<img style="display: none;" src="https://hitwebcounter.com/counter/counter.php?page=7921715&style=0005&nbdigits=6&type=page&initCount=0" title="YkY stats" Alt="web counter"   border="0" />  
 </body>
 </html>
